@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8048b789-0c00-4cd7-88e2-3676b98a8735" name="Default Changelist" comment="Editing function names to start with lowercase letters.">
-      <change afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+    <list default="true" id="8048b789-0c00-4cd7-88e2-3676b98a8735" name="Default Changelist" comment="Updating the changes automatically added to 'workspace.xml' within the PhpStorm.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/message.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +46,7 @@
       <updated>1608741403498</updated>
       <workItem from="1608741406306" duration="1789000" />
       <workItem from="1608751533296" duration="614000" />
-      <workItem from="1608811463449" duration="7240000" />
+      <workItem from="1608811463449" duration="7747000" />
     </task>
     <task id="LOCAL‎۰۰۰۰۱" summary="Creating a new branch to start the project">
       <created>1608742124958</created>
@@ -78,7 +78,19 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۵" />
       <updated>1608817010667</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL‎۰۰۰۰۶" summary="Adding a new file 'config/config.php' to add some variables to be used in other files, such as some directories and database info.">
+      <created>1608819093179</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۶" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۶" />
+      <updated>1608819093179</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۰۷" summary="Updating the changes automatically added to 'workspace.xml' within the PhpStorm.">
+      <created>1608819201788</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۷" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۷" />
+      <updated>1608819201788</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +144,8 @@
     <MESSAGE value="creating message.php to declare a class for messages." />
     <MESSAGE value="Adding private variables and getter and setter to class." />
     <MESSAGE value="Editing function names to start with lowercase letters." />
-    <option name="LAST_COMMIT_MESSAGE" value="Editing function names to start with lowercase letters." />
+    <MESSAGE value="Adding a new file 'config/config.php' to add some variables to be used in other files, such as some directories and database info." />
+    <MESSAGE value="Updating the changes automatically added to 'workspace.xml' within the PhpStorm." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating the changes automatically added to 'workspace.xml' within the PhpStorm." />
   </component>
 </project>
