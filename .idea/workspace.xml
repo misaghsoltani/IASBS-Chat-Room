@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8048b789-0c00-4cd7-88e2-3676b98a8735" name="Default Changelist" comment="Updating the changes automatically added to 'workspace.xml' within the PhpStorm.">
+    <list default="true" id="8048b789-0c00-4cd7-88e2-3676b98a8735" name="Default Changelist" comment="Updating config.php to add DB connection variables and view and model directories.">
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/message.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +46,7 @@
       <updated>1608741403498</updated>
       <workItem from="1608741406306" duration="1789000" />
       <workItem from="1608751533296" duration="614000" />
-      <workItem from="1608811463449" duration="7747000" />
+      <workItem from="1608811463449" duration="8772000" />
     </task>
     <task id="LOCAL‎۰۰۰۰۱" summary="Creating a new branch to start the project">
       <created>1608742124958</created>
@@ -90,7 +90,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۷" />
       <updated>1608819201788</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL‎۰۰۰۰۸" summary="Updating config.php to add DB connection variables and view and model directories.">
+      <created>1608819769282</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۸" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۸" />
+      <updated>1608819769282</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +152,7 @@
     <MESSAGE value="Editing function names to start with lowercase letters." />
     <MESSAGE value="Adding a new file 'config/config.php' to add some variables to be used in other files, such as some directories and database info." />
     <MESSAGE value="Updating the changes automatically added to 'workspace.xml' within the PhpStorm." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating the changes automatically added to 'workspace.xml' within the PhpStorm." />
+    <MESSAGE value="Updating config.php to add DB connection variables and view and model directories." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating config.php to add DB connection variables and view and model directories." />
   </component>
 </project>
