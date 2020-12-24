@@ -1,5 +1,6 @@
 <?php
 
+
 abstract class person
 {
     public $name;
@@ -67,7 +68,7 @@ class user extends person
         return false;
     }
 
-    private function IsUsernameExist() {
+    private function isUsernameExist() {
         $paramTypes = "s";
         $Parameters = array($this->username);
         $result = database::ExecuteQuery('IsUsernameExist', $paramTypes, $Parameters);
@@ -77,7 +78,7 @@ class user extends person
         return false;
     }
 
-    function Save() {
+    function save() {
         if(!$this->IsUsernameExist()) {
             $paramTypes = "ssss";
             $Parameters = array($this->username, $this->password,
