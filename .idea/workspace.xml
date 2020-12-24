@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8048b789-0c00-4cd7-88e2-3676b98a8735" name="Default Changelist" comment="creating message.php to declare a class for messages.">
+    <list default="true" id="8048b789-0c00-4cd7-88e2-3676b98a8735" name="Default Changelist" comment="Editing function names to start with lowercase letters.">
+      <change afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +46,7 @@
       <updated>1608741403498</updated>
       <workItem from="1608741406306" duration="1789000" />
       <workItem from="1608751533296" duration="614000" />
-      <workItem from="1608811463449" duration="5241000" />
+      <workItem from="1608811463449" duration="7240000" />
     </task>
     <task id="LOCAL‎۰۰۰۰۱" summary="Creating a new branch to start the project">
       <created>1608742124958</created>
@@ -66,7 +66,19 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۳" />
       <updated>1608815825904</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL‎۰۰۰۰۴" summary="Adding private variables and getter and setter to class.">
+      <created>1608816954190</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۴" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۴" />
+      <updated>1608816954190</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۰۵" summary="Editing function names to start with lowercase letters.">
+      <created>1608817010667</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۵" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۵" />
+      <updated>1608817010667</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +130,8 @@
     <MESSAGE value="Creating a new branch to start the project" />
     <MESSAGE value="making a class for user in '/model' directory with a class named person and another named user, which extends the person class and adds some attributes like username, password and status" />
     <MESSAGE value="creating message.php to declare a class for messages." />
-    <option name="LAST_COMMIT_MESSAGE" value="creating message.php to declare a class for messages." />
+    <MESSAGE value="Adding private variables and getter and setter to class." />
+    <MESSAGE value="Editing function names to start with lowercase letters." />
+    <option name="LAST_COMMIT_MESSAGE" value="Editing function names to start with lowercase letters." />
   </component>
 </project>
