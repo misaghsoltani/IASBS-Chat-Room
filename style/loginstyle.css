@@ -84,9 +84,3 @@ form.form1 {
     font-size: 13px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
-
-@media (max-width: 600px) {
-    .main {
-        border-radius: 0px;
-    }
-}
