@@ -59,9 +59,8 @@ form.form1 {
     padding-top: 40px;
 }
 
-.username:focus, .password:focus {
+.txtBox:focus {
     border: 2px solid rgba(0, 0, 0, 0.18) !important;
-
 }
 
 .submit {
