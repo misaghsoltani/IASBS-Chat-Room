@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8048b789-0c00-4cd7-88e2-3676b98a8735" name="Default Changelist" comment="Styling the register option.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/message.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/message.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/chat.html" afterDir="false" />
-    </list>
+    <list default="true" id="8048b789-0c00-4cd7-88e2-3676b98a8735" name="Default Changelist" comment="Styling the register option." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +67,7 @@
       <workItem from="1609245928611" duration="5215000" />
       <workItem from="1609329872533" duration="17147000" />
       <workItem from="1609411643396" duration="14362000" />
+      <workItem from="1609489676617" duration="368000" />
     </task>
     <task id="LOCAL‎۰۰۰۰۱" summary="Creating a new branch to start the project">
       <created>1608742124958</created>
@@ -343,7 +339,19 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۴۵" />
       <updated>1609418884547</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL‎۰۰۰۴۶" summary="Edited some interface problems.">
+      <created>1609489766715</created>
+      <option name="number" value="LOCAL‎۰۰۰۴۶" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۴۶" />
+      <updated>1609489766715</updated>
+    </task>
+    <task id="LOCAL‎۰۰۰۴۷" summary="Workspace updates (for phpstorm)">
+      <created>1609489808058</created>
+      <option name="number" value="LOCAL‎۰۰۰۴۷" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۴۷" />
+      <updated>1609489808058</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,8 +400,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Editing log in container height." />
-    <MESSAGE value="Editing some attributes to make the main div center and doing some changes to make the ui clean." />
     <MESSAGE value="Adding an option for people who don't have account, to register." />
     <MESSAGE value="Styling the register option." />
     <MESSAGE value="Making 'Create Acount' text-decoration: underline" />
@@ -417,6 +423,8 @@
     <MESSAGE value="Changed the chat_main_bg.jpg with chat_main_bg.png" />
     <MESSAGE value="Added grid to manages the dividers, and edited some related styles." />
     <MESSAGE value="Removed some redundant lines which were commented." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed some redundant lines which were commented." />
+    <MESSAGE value="Edited some interface problems." />
+    <MESSAGE value="Workspace updates (for phpstorm)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Workspace updates (for phpstorm)" />
   </component>
 </project>
