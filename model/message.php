@@ -49,7 +49,7 @@ class message
         $this->msgStatus = $msgStatus;
     }
 
-    function save(){
+    function save() {
 
     }
 }
