@@ -28,6 +28,7 @@ class user extends person
     private $username;
     private $password;
     private $status;
+    private $last_online;
 
     function getUsername() {
         return $this->username;
@@ -53,6 +54,13 @@ class user extends person
         $this->$status = $status;
     }
 
+    function getLastOnline() {
+        return $this->last_online;
+    }
+
+    function setLastOnline($last_online) {
+        $this->$last_online = $last_online;
+    }
 /*    function checkUserPass() {
         $paramTypes = "ss";
         $Parameters = array($this->username, $this->password);
