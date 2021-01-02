@@ -311,6 +311,7 @@ a {
 
 .top.right-top {
     line-height: 100px;
+    /*box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);*/
 }
 
 .user-avatar.right-top {
@@ -329,23 +330,27 @@ ul li {
     padding: 20px;
     border-radius: 30px;
     margin-bottom: 2px;
+    max-width: 50%;
 }
 
 .him {
     background: #eee;
     float: left;
-    margin-left: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .me {
     float: right;
     background: #0084ff;
     color: #fff;
-    margin-right: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .him + .me {
     border-bottom-right-radius: 5px;
+    margin-top: 10px;
 }
 
 .me + .me {
@@ -355,4 +360,74 @@ ul li {
 
 .me:last-of-type {
     border-bottom-right-radius: 30px;
+}
+
+.me:first-of-type {
+    border-bottom-right-radius: 5px;
+    margin-top: 10px;
+}
+
+.me + .him {
+    border-bottom-left-radius: 5px;
+    margin-top: 10px;
+}
+
+.him + .him {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.him:last-of-type {
+    border-bottom-left-radius: 30px;
+}
+
+.him:first-of-type {
+    border-bottom-left-radius: 5px;
+    margin-top: 10px;
+}
+
+/*.block-contact {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right, #9C27B0, #E040FB);
+    height: 30px;
+    width: 50px;
+    border: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    padding: 5px;
+    text-decoration: none;
+    float: right;
+    margin-right: 50px;
+    margin-top: 35px;
+    line-height: 30px;
+    text-align: center;
+}*/
+
+.block-contact {
+    background-image: linear-gradient(to right, #EB3349 0%, #F45C43  51%, #EB3349  100%);
+    margin: 28px;
+    height: 30px;
+    width: 50px;
+    padding: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 5em;
+    display: block;
+    float: right;
+    line-height: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.block-contact:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
