@@ -19,7 +19,7 @@ function isCharValidLastName(event){
     return isCharEnglish(event);
 }
 function isCharValidUsername(event){
-    return (isCharEnglish(event) || isCharNumber(event) || event.keyCode == 189);
+    return (isCharEnglish(event) || isCharNumber(event) || event.keyCode === 189);
 }
 function isCharValidPassword(event){
     let pattern = /[a-zA-Z0-9=*$#!+-]/;
