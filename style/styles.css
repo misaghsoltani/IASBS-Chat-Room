@@ -137,6 +137,7 @@ a {
     width: 100%;*/
     /*background-color: yellow;*/
     background-color: white;
+    overflow-y: auto;
 }
 
 .bottom.left-bottom {
@@ -158,6 +159,7 @@ a {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateY(-50%) translateX(-50%);
+    display: none;
     /*vertical-align: middle;*/
 }
 
@@ -313,4 +315,44 @@ a {
 
 .user-avatar.right-top {
     margin-top: 25px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    clear: both;
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 2px;
+}
+
+.him {
+    background: #eee;
+    float: left;
+    margin-left: 8px;
+}
+
+.me {
+    float: right;
+    background: #0084ff;
+    color: #fff;
+    margin-right: 8px;
+}
+
+.him + .me {
+    border-bottom-right-radius: 5px;
+}
+
+.me + .me {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.me:last-of-type {
+    border-bottom-right-radius: 30px;
 }
