@@ -152,7 +152,39 @@ function sendMessage(){
       }
       else{
          //call php send message with message id
-         alert(document.getElementById("msg-input").value);
+         let tagLI = document.createElement("LI");
+         let attClass = document.createAttribute("class");
+         let attOnMouseOver = document.createAttribute("onmouseover");
+         let attOnMouseOut = document.createAttribute("onmouseout");
+         attClass.value = "me";
+         attOnMouseOver.value = "showEditArrow(this)";
+         attOnMouseOut.value = "hideEditArrow(this)";
+         tagLI.setAttributeNode(attClass);
+         tagLI.setAttributeNode(attOnMouseOver);
+         tagLI.setAttributeNode(attOnMouseOut);
+         let tagIMG = document.createElement("IMG");
+         let attSRC = document.createAttribute("src");
+         let attClass2 = document.createAttribute("class");
+         let attOnClick = document.createAttribute("onclick");
+         attSRC.value = "images/msg_edit_menu.png";
+         attClass2.value = "msg-menu-selector";
+         attOnClick.value = "showContextMenu(this)";
+         tagIMG.setAttributeNode(attSRC);
+         tagIMG.setAttributeNode(attClass2);
+         tagIMG.setAttributeNode(attOnClick);
+         let tagBR = document.createElement("BR");
+         let attClass3 = document.createAttribute("class");
+         attClass3.value = "msg-br";
+         tagBR.setAttributeNode(attClass3);
+         let tagP = document.createElement("p");
+         let textNode = document.createTextNode(document.getElementById("msg-input").value);
+         tagP.appendChild(textNode);
+         tagLI.appendChild(tagIMG);
+         tagLI.appendChild(tagBR);
+         tagLI.appendChild(tagP);
+         document.getElementById("chat ul").appendChild(tagLI);
+         element[0].scrollTop = element[0].scrollHeight;
+         //alert(document.getElementById("msg-input").value);
          document.getElementById("msg-input").value = "";
       }
    }
