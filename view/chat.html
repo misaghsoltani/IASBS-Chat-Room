@@ -84,11 +84,11 @@
         <div class="modal main main-register">
             <p class="sign" align="center">Edit Profile</p>
             <form class="form1">
-                <input class="name txtBox" type="text" align="center" placeholder="First Name">
-                <input class="family txtBox" type="text" align="center" placeholder="Last Name">
-                <input class="username txtBox" type="text" align="center" placeholder="Username">
-                <input class="password txtBox" type="password" align="center" placeholder="Password">
-                <input class="submit modal-btn" type="submit" align="center" value="Update">
+                <input class="name txtBox" type="text" align="center" placeholder="First Name" onkeypress="return isCharValidFirstName(event)">
+                <input class="family txtBox" type="text" align="center" placeholder="Last Name" onkeypress="return isCharValidLastName(event)">
+                <input class="username txtBox" type="text" align="center" placeholder="Username" onkeypress="return isCharValidUsername(event)">
+                <input class="password txtBox" type="password" align="center" placeholder="Password" onkeypress="return isCharValidPassword(event)">
+                <input class="submit modal-btn" type="submit" align="center" value="Update" onclick="return Validation()">
                 <p class="register close-edit-profile" align="center" onclick="closeEditProfile()">Cancel</p>
             </form>
         </div>
