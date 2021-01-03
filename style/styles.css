@@ -258,6 +258,7 @@ a {
     line-height: 80px;
     border-bottom: solid white 2px;
     cursor: pointer;
+    position: relative;
 }
 
 .chat-user:last-child {
@@ -266,6 +267,16 @@ a {
 
 .chat-user:hover {
     background-color: white;
+}
+
+.new-msg-red {
+    background-color: red;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 17px;
+    left: 58px;
+    position: absolute;
 }
 
 .user-avatar {
