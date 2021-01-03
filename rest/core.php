@@ -21,6 +21,11 @@ class Response{
         $this->code = $code;
     }
 
+    public static function internal_error()
+    {
+        self::special_response(500, "Internal server error.");
+    }
+
     public function __toString()
     {
         $response = array(
@@ -36,8 +41,13 @@ class Response{
     }
 
     public static function special_response($code, $msg){
+        http_response_code($code);
         echo (new Response($code,$msg));
         exit();
+    }
+
+    public static function method_not_allowed_response($msg = "Method not allowed."){
+        self::special_response(405,$msg);
     }
 
 }
