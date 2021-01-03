@@ -1,5 +1,6 @@
 //some code to show the modal popup for profile edit
-
+var currentMessageObject;
+var editingStatus = false;
 function openEditProfile(){
    var modalBg = document.querySelector('.modal-bg');
    modalBg.classList.add('active');
@@ -121,19 +122,23 @@ function hideEditArrow(el){
    msg_menu.style.display = "none";
 }
 
-function showContextMenu(){
+function showContextMenu(selectorObject){
+   currentMessageObject = selectorObject.parentElement;
    let contextMenu = document.querySelector('.context-menu');
    document.querySelector('.context-menu-container').style.display = 'block';
    contextMenu.style.display = 'block';
    contextMenu.style.opacity = ''
    contextMenu.style.left = event.clientX + 'px';
-   //alert(event.clientY);
    contextMenu.style.top = event.clientY + 'px';
-   /*el.style.backgroundColor = 'black';*/
 }
 
 function hideContextMenu(){
    let contextMenu = document.querySelector('.context-menu');
    contextMenu.style.display = 'none';
    document.querySelector('.context-menu-container').style.display = 'none';
+}
+
+function editMessage(){
+   document.getElementById("msg-input").value = currentMessageObject.childNodes[2].innerHTML;
+   editingStatus = true;
 }
