@@ -33,6 +33,7 @@ function validateFirstName(){
         return true;
     }else{
         //say something
+		window.alert("1");
         return false;
     }
 }
@@ -42,6 +43,7 @@ function validateLastName(){
         return true;
     }else{
         //say something
+		window.alert("2");
         return false;
     }
 }
@@ -51,6 +53,7 @@ function validateUsername(){
         return true;
     }else {
         //say something
+		window.alert("3");
         return false;
     }
 }
@@ -60,21 +63,28 @@ function validatePassword(){
         return true;
     }else {
         //say something
+		window.alert("4");
         return false;
     }
 }
 function validateConfirmation(){
     let confirmation = document.getElementsByClassName("password-confirm txtBox")[0].value;
     let password = document.getElementsByClassName("password txtBox")[0].value;
-    if(validatePassword() && Password == confirmation){
+    if(confirmation.length >= 8 && confirmation.length <= 24 && password == confirmation){
         return true;
     }else{
         //say something
+		window.alert("5");
         return false;
     }
 }
 
 function Validation(){
-    let res = validateFirstName() && validateLastName() && validateUsername() && validatePassword() && validateConfirmation();
-    return res;
+    let res1 = validateFirstName();
+	let res2 = validateLastName();
+	let res3 = validateUsername();
+	let res4 = validatePassword();
+	let res5 = validateConfirmation();
+	window.alert(res1 && res2 && res3 && res4 && res5);
+    return res1 && res2 && res3 && res4 && res5;
 }
