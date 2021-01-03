@@ -23,7 +23,7 @@ function isCharValidUsername(event){
     return (isCharEnglish(event) || isCharNumber(event) || flag);
 }
 function isCharValidPassword(event){
-    let pattern = /[=*$#!+-]/;
+    let pattern = /[=*@$#!+-]/;
     return (isCharEnglish(event) || isCharNumber(event) || pattern.test(String.fromCharCode(event.keyCode)));
 }
 
