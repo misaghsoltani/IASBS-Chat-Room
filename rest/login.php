@@ -1,4 +1,7 @@
 <?php
+
+use Ahc\Jwt\JWT;
+
 require_once 'core.php';
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST'){
@@ -18,8 +21,22 @@ try{
     }
 
     $db = Database::get_instance();
-    
-    
+    if(!$db){
+        Response::internal_error();
+    }
+    // check if username and password is correct:
+    $username = $data['username'];
+    $password= $data['password'];
+    $query = "CALL LOGIN('$username', '$password', \"@r\");SELECT \"@r\";";
+    print_r($query);
+    $result = $db->query($query);
+
+    print_r($db->error);
+
+    $jwt = new JWT('secret', 'HS256', 3600 * 24 * 10, 10);
+
+
+
 }catch (Throwable $exception){
-    Response::internal_error();
+    Response::internal_error($exception->getMessage());
 }
