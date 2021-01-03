@@ -21,9 +21,9 @@ class Response{
         $this->code = $code;
     }
 
-    public static function internal_error()
+    public static function internal_error($msg = "Internal server error.")
     {
-        self::special_response(500, "Internal server error.");
+        self::special_response(500, $msg );
     }
 
     public function __toString()

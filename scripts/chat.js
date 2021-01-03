@@ -142,3 +142,18 @@ function editMessage(){
    document.getElementById("msg-input").value = currentMessageObject.childNodes[2].innerHTML;
    editingStatus = true;
 }
+
+function sendMessage(){
+   if(checkMessageText(document.getElementById("msg-input").value)){
+      if(editingStatus == true){
+         //call php edit message with message id
+         currentMessageObject.childNodes[2].innerHTML = document.getElementById("msg-input").value;
+         document.getElementById("msg-input").value = "";
+      }
+      else{
+         //call php send message with message id
+         alert(document.getElementById("msg-input").value);
+         document.getElementById("msg-input").value = "";
+      }
+   }
+}
