@@ -50,6 +50,10 @@ class Response{
         self::special_response(405,$msg);
     }
 
+    public static function token_is_invalid(){
+        self::special_response(401, "Login information is wrong.");
+    }
+
 }
 
 
