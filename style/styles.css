@@ -452,6 +452,12 @@ li>p {
 .close-edit-profile:hover {
     text-decoration: underline;
 }
+.context-menu-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+}
 
 .context-menu {
     position: absolute;
@@ -462,6 +468,7 @@ li>p {
     background: #f6f6f6;
     overflow: hidden;
     display: none;
+    opacity: 1;
 }
 
 .context-menu ul {

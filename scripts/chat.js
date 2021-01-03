@@ -37,9 +37,17 @@ function hideEditArrow(el){
 
 function showContextMenu(){
    let contextMenu = document.querySelector('.context-menu');
+   document.querySelector('.context-menu-container').style.display = 'block';
    contextMenu.style.display = 'block';
+   contextMenu.style.opacity = ''
    contextMenu.style.left = event.clientX + 'px';
    //alert(event.clientY);
    contextMenu.style.top = event.clientY + 'px';
    /*el.style.backgroundColor = 'black';*/
+}
+
+function hideContextMenu(){
+   let contextMenu = document.querySelector('.context-menu');
+   contextMenu.style.display = 'none';
+   document.querySelector('.context-menu-container').style.display = 'none';
 }
