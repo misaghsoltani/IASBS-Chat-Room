@@ -54,7 +54,7 @@
         <div class="middle right-middle grid-item">
             <img src="images/chat_main_bg.png" class="bg-image" height="250" width="360">
             <ul>
-                <li class="me">My first msg.</li>
+                <li class="me" onmouseover="showEditArrow(this)" onmouseout="hideEditArrow(this)"><img src="images/msg_edit_menu.png" class="msg-menu-selector"><br class="msg-br"><p>My first msg.</p></li>
                 <li class="me">My first msg.</li>
                 <li class="me">My first msg.</li>
                 <li class="him">Msg from him</li>
@@ -67,10 +67,14 @@
                 <li class="him">Second msg from him</li>
                 <li class="me">My first msg.</li>
                 <li class="me">Second msg from me</li>
-                <li class="me">The last msg. dfsdfjlkjlkjlkjkjkljdfsfsdfnv  sldj ksdjf lkj ksdjf kljsdf kljds</li>
-                <li class="him">Second msg from him</li>
-                <li class="him">Second msg from him</li>
-                <li class="him">Second msg from him</li>
+                <li class="him">The last msg. dfsdfjlkjlkjlkjkjkljdfsfsdfnv  sldj ksdjf lkj ksdjf kljsdf kljds</li>
+                <li class="him" onmouseover="showEditArrow(this)" onmouseout="hideEditArrow(this)"><img src="images/msg_edit_menu.png" class="msg-menu-selector"><br class="msg-br"><p>The last msg. dfsdfjlkjlkjlkjkjkljdfsfsdfnv  sldj ksdjf lkj ksdjf kljsdf kljds</p></li>
+                <li class="him" onmouseover="showEditArrow(this)" onmouseout="hideEditArrow(this)"><img src="images/msg_edit_menu.png" class="msg-menu-selector"><br class="msg-br"><p>My first msg.</p></li>
+                <li class="me" onmouseover="showEditArrow(this)" onmouseout="hideEditArrow(this)"><img src="images/msg_edit_menu.png" class="msg-menu-selector"><br class="msg-br"><p>My first msg.</p></li>
+                <li class="me" onmouseover="showEditArrow(this)" onmouseout="hideEditArrow(this)"><img src="images/msg_edit_menu.png" class="msg-menu-selector"><br class="msg-br"><p>My first msg.</p></li>
+                <li class="me" onmouseover="showEditArrow(this)" onmouseout="hideEditArrow(this)"><img src="images/msg_edit_menu.png" class="msg-menu-selector"><br class="msg-br"><p>My first msg.</p></li>
+                <li class="me" onmouseover="showEditArrow(this)" onmouseout="hideEditArrow(this)"><img src="images/msg_edit_menu.png" class="msg-menu-selector" onclick="showContextMenu()"><br class="msg-br"><p>My first msg.</p></li>
+                <li class="me" onmouseover="showEditArrow(this)" onmouseout="hideEditArrow(this)"><img src="images/msg_edit_menu.png" class="msg-menu-selector" onclick="showContextMenu()"><br class="msg-br"><p>My first msg.</p></li>
             </ul>
         </div>
         <div class="bottom right-bottom grid-item">
@@ -79,6 +83,12 @@
                 <input type="submit" class="send-msg-btn" value="">
             </form>
         </div>
+    </div>
+    <div class="context-menu">
+        <ul>
+            <li>Edit</li>
+            <li>Delete</li>
+        </ul>
     </div>
     <div class="modal-bg">
         <div class="modal main main-register">
