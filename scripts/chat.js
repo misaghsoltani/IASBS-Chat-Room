@@ -1,7 +1,13 @@
 //some code to show the modal popup for profile edit
-var modalBtn = document.querySelector('.left-top');
-var modalBg =document.querySelector('.modal-bg');
+/*var modalBtn = document.querySelector('.left-top');*/
 
-modalBtn.addEventListener('click', function (){
+
+function openEditProfile(){
+   var modalBg = document.querySelector('.modal-bg');
    modalBg.classList.add('active');
-});
+}
+
+function closeEditProfile(){
+   var modalBg = document.querySelector('.modal-bg');
+   modalBg.classList.remove('active');
+}

@@ -442,10 +442,18 @@ ul li {
     left: 0;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s opacity 0.5s;
+    transition: visibility 0s, opacity 0.5s;
 }
 
 .active {
     visibility: visible;
     opacity: 1;
+}
+
+.close-edit-profile {
+    cursor: pointer;
+}
+
+.close-edit-profile:hover {
+    text-decoration: underline;
 }

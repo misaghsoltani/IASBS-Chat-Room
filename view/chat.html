@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-    <script type="text/javascript" src="scripts/chat.js"></script>
+    <script src="../scripts/chat.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chat</title>
 </head>
 <body>
     <div class="main-container grid-container">
-        <div class="top left-top grid-item">
+        <div class="top left-top grid-item" onclick="openEditProfile()">
             <img src="images/user_logo.png" class="my-avatar">
             <span class="item-name my-name">Misagh Soltani</span>
         </div>
@@ -90,7 +90,7 @@
                 <input class="username txtBox" type="text" align="center" placeholder="Username">
                 <input class="password txtBox" type="password" align="center" placeholder="Password">
                 <input class="submit modal-btn" type="submit" align="center" value="Update">
-                <p class="register" align="center">Cancel</p>
+                <p class="register close-edit-profile" align="center" onclick="closeEditProfile()">Cancel</p>
             </form>
         </div>
     </div>
