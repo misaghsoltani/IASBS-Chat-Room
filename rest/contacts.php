@@ -13,6 +13,7 @@ try{
 
     $username = $payload['username'];
 
+
     $db = Database::get_instance();
     $result = $db->query("CALL CONTACTLIST('$username');");
 
