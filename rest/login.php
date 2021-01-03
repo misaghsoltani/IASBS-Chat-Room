@@ -27,14 +27,28 @@ try{
     // check if username and password is correct:
     $username = $data['username'];
     $password= $data['password'];
-    $query = "CALL LOGIN('$username', '$password', \"@r\");SELECT \"@r\";";
-    print_r($query);
+    $query = "CALL LOGIN('$username', '$password', @_);";
+//    print_r($query);
     $result = $db->query($query);
 
-    print_r($db->error);
+//    print_r($db->error);
+    if($result->fetch_array()[0] == 0){
+        // username and password does not match
+        Response::special_response(401, "Login information is wrong.");
+    }
 
-    $jwt = new JWT('secret', 'HS256', 3600 * 24 * 10, 10);
+    $jwt = new JWT(md5($username), 'HS256', 3600 * 24 * 10, 10);
 
+    if(!isset($_SERVER['HTTP_USER_AGENT'])){
+        $_SERVER['HTTP_USER_AGENT'] = "";
+    }
+    $token = $jwt->encode([
+        'username' => $username
+    ]);
+
+    $response = new Response(200,['token' => $token]);
+    echo($response);
+    exit();
 
 
 }catch (Throwable $exception){
