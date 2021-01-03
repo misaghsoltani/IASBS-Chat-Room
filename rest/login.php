@@ -37,7 +37,7 @@ try{
         Response::special_response(401, "Login information is wrong.");
     }
 
-    $jwt = new JWT(md5($username), 'HS256', 3600 * 24 * 10, 10);
+    $jwt = new JWT('secret', 'HS256', 3600 * 24 * 10, 10);
 
     if(!isset($_SERVER['HTTP_USER_AGENT'])){
         $_SERVER['HTTP_USER_AGENT'] = "";
