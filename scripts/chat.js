@@ -10,6 +10,13 @@ function closeEditProfile(){
    modalBg.classList.remove('active');
 }
 
+function checkMessageText(text){
+   let trimmed = text.trim();
+   if(trimmed == ""){
+      return false;
+   }else{return true;}
+}
+
 //code fro scrolling chat box to down
 var element = document.getElementsByClassName("right-middle");
 element[0].scrollTop = element[0].scrollHeight;
