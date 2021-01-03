@@ -31,6 +31,15 @@ class Response{
         return json_encode($response);
     }
 
+    public static function all_parameters_required_response(){
+        self::special_response(422, "All parameters are mandatory.");
+    }
+
+    public static function special_response($code, $msg){
+        echo (new Response($code,$msg));
+        exit();
+    }
+
 }
 
 
