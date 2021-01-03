@@ -157,3 +157,8 @@ function sendMessage(){
       }
    }
 }
+
+function deleteMessage(){
+   //call php delete message with message id
+   currentMessageObject.remove();
+}
