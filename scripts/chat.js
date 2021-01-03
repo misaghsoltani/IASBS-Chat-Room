@@ -142,3 +142,7 @@ function editMessage(){
    document.getElementById("msg-input").value = currentMessageObject.childNodes[2].innerHTML;
    editingStatus = true;
 }
+
+function sendMessage(){
+   alert(document.getElementById("msg-input").value);
+}
