@@ -332,6 +332,7 @@ ul li {
     border-radius: 30px;
     margin-bottom: 2px;
     max-width: 50%;
+    min-width: 20%;
 }
 
 .him {
@@ -400,6 +401,17 @@ li>p {
 
 .msg-br {
     display: none;
+}
+
+.status-img {
+    height: auto;
+    width: 20px;
+    float: right;
+}
+
+.datetime-span {
+    float: left;
+    font-size: 13.5px;
 }
 
 .block-contact {
