@@ -493,6 +493,7 @@ li>p {
     cursor: pointer;
     width: 100%;
     border-radius: 0;
+    min-width: 0;
 }
 
 .context-menu ul li:hover {
