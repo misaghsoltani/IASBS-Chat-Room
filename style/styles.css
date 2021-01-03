@@ -388,6 +388,22 @@ ul li {
     margin-top: 10px;
 }
 
+.him .status-img {
+    display: none;
+}
+
+.him .datetime-span {
+    float: left;
+}
+
+.me .status-img {
+    float: left;
+}
+
+.me .datetime-span {
+    float: right;
+}
+
 .msg-menu-selector {
     height: 20px;
     width: 20px;
