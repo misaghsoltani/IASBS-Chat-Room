@@ -148,8 +148,15 @@ function sendMessage(){
    if(checkMessageText(messageText)){
       if(editingStatus == true){
          //call php edit message with message id
+         var receiver = document.getElementById("username").innerHTML;
+         axios.post("../rest/message", {id: 17 , text: messageText}, {headers: {Authorization: "Bearer " + Cookies.get('token')}}).then(function (response) {
+            console.log(response);
+         });
+
          currentMessageObject.childNodes[2].innerHTML = document.getElementById("msg-input").value;
          document.getElementById("msg-input").value = "";
+
+
       }
       else{
          //call php send message with message id
@@ -216,5 +223,20 @@ function sendMessage(){
 
 function deleteMessage(){
    //call php delete message with message id
+   // axios.delete("../rest/message", {id: 17 }, {headers: {Authorization: "Bearer " + Cookies.get('token')}}).then(function (response) {
+   //
+   // });
+
+   axios.delete("../rest/message", {
+      headers: {
+         Authorization: "Bearer " + Cookies.get('token')
+      },
+      data: {
+         id: 17
+      }
+   }).then(function (response) {
+      console.log(response);
+   });
+
    currentMessageObject.remove();
 }
