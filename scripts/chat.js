@@ -247,3 +247,92 @@ function blockUser() {
       console.log(response);
    });
 }
+
+function createDiv(id, username){
+   let tagDiv = document.createElement("Div");
+   let attClass = document.createAttribute("class");
+   let attID = document.createAttribute("id");
+   attClass.value = "chat-user";
+   attID.value = id;
+   tagDiv.setAttributeNode(attClass);
+   tagDiv.setAttributeNode(attID);
+   let tagDiv2 = document.createElement("Div");
+   let attClass2 = document.createAttribute("class");
+   attClass2.value = "chat-user";
+   tagDiv2.setAttributeNode(attClass2);
+   let tagIMG = document.createElement("IMG");
+   let attSRC = document.createAttribute("src");
+   let attClass3 = document.createAttribute("class");
+   attSRC.value = "images/user_logo.png";
+   attClass3.value = "user-avatar";
+   tagIMG.setAttributeNode(attSRC);
+   tagIMG.setAttributeNode(attClass3);
+   let tagSpan = document.createElement("SPAN");
+   let attClass4 = document.createAttribute("class");
+   attClass4.value = "item-name";
+   let textNode = document.createTextNode(username);
+   tagSpan.setAttributeNode(attClass4);
+   tagSpan.appendChild(textNode);
+   tagDiv.appendChild(tagDiv2);
+   tagDiv.appendChild(tagIMG);
+   tagDiv.appendChild(tagSpan);
+   return tagDiv;
+}
+
+function createLI(msgText, dataTime, status, himOrme){//inja status 1 ta 3 img fargh mikone va himOrme ro "him" bde yani omade payam "me" bde rafte
+   let tagLI = document.createElement("LI");
+   let attClass = document.createAttribute("class");
+   let attOnMouseOver = document.createAttribute("onmouseover");
+   let attOnMouseOut = document.createAttribute("onmouseout");
+   attClass.value = himOrme;
+   attOnMouseOver.value = "showEditArrow(this)";
+   attOnMouseOut.value = "hideEditArrow(this)";
+   tagLI.setAttributeNode(attClass);
+   tagLI.setAttributeNode(attOnMouseOver);
+   tagLI.setAttributeNode(attOnMouseOut);
+   let tagIMG = document.createElement("IMG");
+   let attSRC = document.createAttribute("src");
+   let attClass2 = document.createAttribute("class");
+   let attOnClick = document.createAttribute("onclick");
+   attSRC.value = "images/msg_edit_menu.png";
+   attClass2.value = "msg-menu-selector";
+   attOnClick.value = "showContextMenu(this)";
+   tagIMG.setAttributeNode(attSRC);
+   tagIMG.setAttributeNode(attClass2);
+   tagIMG.setAttributeNode(attOnClick);
+   let tagBR = document.createElement("BR");
+   let attClass3 = document.createAttribute("class");
+   attClass3.value = "msg-br";
+   tagBR.setAttributeNode(attClass3);
+   let tagP = document.createElement("p");
+   let textNode = document.createTextNode(msgText);
+   tagP.appendChild(textNode);
+   let tagBR2 = document.createElement("BR");
+   let tagDiv = document.createElement("div");
+   let tagSpan = document.createElement("SPAN");
+   let attClass4 = document.createAttribute("class");
+   attClass4.value = "datetime-span";
+   let textNode2 = document.createTextNode(datTime);
+   tagSpan.setAttributeNode(attClass4);
+   tagSpan.appendChild(textNode2);
+   let tagIMG2 = document.createElement("IMG");
+   let attClass5 = document.createAttribute("class");
+   let attSRC2 = document.createAttribute("src");
+   attClass5.value = "status-img";
+   if(status == 1){
+   attSRC2.value = "images/sent.png";}
+   if(status == 2){
+      attSRC2.value = "images/read.png";}
+   if(status == 3){
+      attSRC2.value = "images/received.png";}
+   tagIMG2.setAttributeNode(attClass5);
+   tagIMG2.setAttributeNode(attSRC2);
+   tagDiv.appendChild(tagSpan);
+   tagDiv.appendChild(tagIMG2);
+   tagLI.appendChild(tagIMG);
+   tagLI.appendChild(tagBR);
+   tagLI.appendChild(tagP);
+   tagLI.appendChild(tagBR2);
+   tagLI.appendChild(tagDiv);
+   return tagLI;
+}
