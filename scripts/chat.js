@@ -240,3 +240,10 @@ function deleteMessage(){
 
    currentMessageObject.remove();
 }
+
+function blockUser() {
+   let user = document.getElementById("username").innerHTML;
+   axios.post("../rest/block", {id: user }, {headers: {Authorization: "Bearer " + Cookies.get('token')}}).then(function (response) {
+      console.log(response);
+   });
+}
