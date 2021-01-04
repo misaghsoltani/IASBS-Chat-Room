@@ -8,6 +8,8 @@
     <title>Chat</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    <script src="../scripts/angular.min.js"></script>
+    <script src="../scripts/loadcontacts.js"></script>
 
 </head>
 <body>
@@ -19,31 +21,11 @@
         <div class="middle left-middle grid-item">
             <input type="search" id="search-input" class="txtBox" placeholder="Search in users">
         </div>
-        <div class="bottom left-bottom grid-item">
-            <div class="chat-user">
+        <div class="bottom left-bottom grid-item" ng-app="getContacts" ng-repeat="user in users">
+            <div class="chat-user" ng-attr-id="{{user.username}}">
                 <div class="new-msg-red"></div>
                 <img src="images/user_logo.png" class="user-avatar">
-                <span class="item-name">Erfan MoharramKhani</span>
-            </div>
-            <div class="chat-user">
-                <img src="images/user_logo.png" class="user-avatar">
-                <span class="item-name">Javad Asqari</span>
-            </div>
-            <div class="chat-user">
-                <img src="images/user_logo.png" class="user-avatar">
-                <span class="item-name">Javad Asqari</span>
-            </div>
-            <div class="chat-user">
-                <img src="images/user_logo.png" class="user-avatar">
-                <span class="item-name">Javad Asqari</span>
-            </div>
-            <div class="chat-user">
-                <img src="images/user_logo.png" class="user-avatar">
-                <span class="item-name">Javad Asqari</span>
-            </div>
-            <div class="chat-user">
-                <img src="images/user_logo.png" class="user-avatar">
-                <span class="item-name">Javad Asqari</span>
+                <span class="item-name">{{user.fullname}}</span>
             </div>
             <div class="chat-user">
                 <img src="images/user_logo.png" class="user-avatar">
