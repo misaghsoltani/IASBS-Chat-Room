@@ -30,20 +30,25 @@
 </div>
 <script>
     document.getElementById("sendButton").addEventListener("click", () => {
-        if(!Validation){
+        if(!Validation()){
             return;
         }
-        axios.post('/IASBS-Chat-Room/rest/register/', {
+        axios.post('../rest/register.php', {
             username:document.getElementById("username").value ,
             password: document.getElementById("password").value,
             first_name: document.getElementById("first_name").value,
             last_name: document.getElementById("last_name").value
         })
             .then(function (response) {
-                console.log(response);
+                if(response.data.code == 201){
+                    window.location.href = "login.html";
+                } else {
+                    alert(response.data.msg);
+                    console.log(response);
+                }
             })
-            .catch(function (error) {
-                console.log(error);
+            .catch(function (response) {
+                console.log(response);
             });
     });
 </script>

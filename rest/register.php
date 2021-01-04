@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
             $db->commit();
             $db->close();
-            Response::special_response(201, "User created.");
+            Response::special_response(201, "User created.", true);
 
         }else{
             // username already exist

@@ -40,8 +40,10 @@ class Response{
         self::special_response(422, "All parameters are mandatory.");
     }
 
-    public static function special_response($code, $msg){
-        http_response_code($code);
+    public static function special_response($code, $msg, $change_status = false){
+        if($change_status){
+            http_response_code($code);
+        }
         echo (new Response($code,$msg));
         exit();
     }
