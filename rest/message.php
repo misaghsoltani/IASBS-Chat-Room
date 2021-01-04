@@ -31,8 +31,8 @@ try{
     }else if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $to = $data['to'];
         $text = $data['text'];
-        if(isset($data['to'])) {
-            $id = $data['to'];
+        if(isset($data['id'])) {
+            $id = $data['id'];
             $result = $db->query("CALL EDITMESSAGE('$id', '$text')");
             Response::special_response(200,["id" => $id]);
 
