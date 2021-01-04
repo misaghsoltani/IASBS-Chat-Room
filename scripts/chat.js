@@ -105,10 +105,10 @@ function Validation(){
 function showEditArrow(el){
    let msg_br = el.querySelector('.msg-br');
    let msg_menu = el.querySelector('.msg-menu-selector');
-   msg_br.style.display = "block";
-   msg_menu.style.display = "block";
    if (el.classList.contains('me')) {
       msg_menu.style.float = "left";
+      msg_br.style.display = "block";
+      msg_menu.style.display = "block";
    }
    else {
       msg_menu.style.float = "right";
