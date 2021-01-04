@@ -5,21 +5,49 @@
     <link rel="stylesheet" href="../style/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+
     <script type="text/javascript" src="../scripts/register.js"></script>
     <title>Register</title>
+
 </head>
 <body>
-<div class="main main-register">
+<div ng-app="myApp" ng-controller="myCtrl" class="main main-register">
     <p class="sign" align="center">Log in</p>
     <form class="form1">
-        <input class="name txtBox" type="text" align="center" placeholder="First Name" onkeypress="return isCharValidFirstName(event)">
-        <input class="family txtBox" type="text" align="center" placeholder="Last Name" onkeypress="return isCharValidLastName(event)">
-        <input class="username txtBox" type="text" align="center" placeholder="Username" onkeypress="return isCharValidUsername(event)">
-        <input class="password txtBox" type="password" align="center" placeholder="Password" onkeypress="return isCharValidPassword(event)">
-        <input class="password-confirm txtBox" type="password" align="center" placeholder="Confirm Password" onkeypress="return isCharValidPassword(event)">
-        <input class="submit" type="submit" align="center" value="Register" onclick="return Validation()">
+        <input id="first_name" class="name txtBox" type="text" align="center" placeholder="First Name" onkeypress="return isCharValidFirstName(event)">
+        <input id="last_name" class="family txtBox" type="text" align="center" placeholder="Last Name" onkeypress="return isCharValidLastName(event)">
+        <input id="username" class="username txtBox" type="text" align="center" placeholder="Username" onkeypress="return isCharValidUsername(event)">
+        <input id="password" class="password txtBox" type="password" align="center" placeholder="Password" onkeypress="return isCharValidPassword(event)">
+        <input id="password_confirm" class="password-confirm txtBox" type="password" align="center" placeholder="Confirm Password" onkeypress="return isCharValidPassword(event)">
+        <button id="sendButton" class="submit" type="button" align="center" value="Register" onclick="return register();">Register</button>
         <p class="register" align="center">Already have an account? <a href="login.html">Sign in</a></p>
     </form>
+
+
 </div>
+<script>
+    document.getElementById("sendButton").addEventListener("click", () => {
+        if(!Validation){
+            return;
+        }
+        axios.post('/IASBS-Chat-Room/rest/register/', {
+            username:document.getElementById("username").value ,
+            password: document.getElementById("password").value,
+            first_name: document.getElementById("first_name").value,
+            last_name: document.getElementById("last_name").value
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    });
+</script>
+
+
 </body>
 </html>

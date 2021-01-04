@@ -88,3 +88,11 @@ function Validation(){
 	window.alert(res1 && res2 && res3 && res4 && res5);
     return res1 && res2 && res3 && res4 && res5;
 }
+
+function register() {
+
+    if(!Validation){
+        return false;
+    }
+    return false;
+}
