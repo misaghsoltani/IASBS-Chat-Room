@@ -9,5 +9,5 @@ app.controller('getContactsController', function ($scope, $http){
     };
 
     $http.get("../rest/contacts.php", requestOptions)
-        .then(function (response) {$scope.users = response.msg;});
+        .then(function (response) {$scope.users = response.data.msg;});
 });
