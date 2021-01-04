@@ -47,6 +47,7 @@ try{
     ]);
 
     $response = new Response(200,['token' => $token]);
+    setcookie('token', $token, time() + (86400 * 10), "/"); // 86400 = 1 day
     echo($response);
     exit();
 

@@ -6,16 +6,32 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Log in</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 <body>
     <div class="main">
         <p class="sign" align="center">Log in</p>
         <form class="form1">
-            <input class="username txtBox" type="text" align="center" placeholder="Username">
-            <input class="password txtBox" type="password" align="center" placeholder="Password">
-            <input class="submit" type="submit" align="center" value="Log in">
+            <input id="username" class="username txtBox" type="text" align="center" placeholder="Username">
+            <input id="password" class="password txtBox" type="password" align="center" placeholder="Password">
+            <input class="submit" type="button" align="center" value="Log in" onclick=" false;">
             <p class="register" align="center">Don't have an account? <a href="register.html">Register</a></p>
         </form>
     </div>
+    <script>
+        document.getElementsByClassName("submit")[0].addEventListener("click", () => {
+            axios.post('../rest/login.php', {
+                username:document.getElementById("username").value ,
+                password: document.getElementById("password").value
+            })
+                .then(function (response) {
+                    console.log(response);
+                })
+                .catch(function (response) {
+                    console.log(response);
+                });
+        });
+    </script>
 </body>
 </html>

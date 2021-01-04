@@ -90,9 +90,10 @@ function Validation(){
 }
 
 function register() {
-
-    if(!Validation){
-        return false;
-    }
-    return false;
+    // console.log("func");
+    // if(!Validation()){
+    //     console.log("if");
+    //     return false;
+    // }
+    // return false;
 }
