@@ -6,6 +6,9 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Chat</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
 </head>
 <body>
     <div class="main-container grid-container">
@@ -47,9 +50,9 @@
                 <span class="item-name">Javad Asqari</span>
             </div>
         </div>
-        <div class="top right-top grid-item">
+        <div class="top right-top grid-item" >
             <img src="images/user_logo.png" class="user-avatar right-top">
-            <span class="item-name chat">Javad Asqari</span>
+            <span class="item-name chat" id="username">JJ</span>
             <div class="block-contact">Block</div>
         </div>
         <div class="middle right-middle grid-item">
@@ -81,7 +84,7 @@
         <div class="bottom right-bottom grid-item">
             <textarea type="text" id="msg-input" name="msg-input" form="msg-form" class="txtBox" placeholder="Type your message here..."></textarea>
             <form action="#" id="msg-form">
-                <input type="submit" class="send-msg-btn" value="" onclick="sendMessage()">
+                <input type="button" class="send-msg-btn" value="" onclick="sendMessage()" >
             </form>
         </div>
     </div>

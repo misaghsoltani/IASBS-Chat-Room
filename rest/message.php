@@ -29,6 +29,7 @@ try{
             }
         Response::special_response(200,$messages);
     }else if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+        if(isset($_POST['']))
         $to = $data['to'];
         $text = $data['text'];
         $result = $db->query("CALL SENDMESSAGE('$username', '$to', '$text')");

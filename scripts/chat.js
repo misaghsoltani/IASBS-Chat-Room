@@ -144,7 +144,8 @@ function editMessage(){
 }
 
 function sendMessage(){
-   if(checkMessageText(document.getElementById("msg-input").value)){
+   let messageText = document.getElementById("msg-input").value;
+   if(checkMessageText(messageText)){
       if(editingStatus == true){
          //call php edit message with message id
          currentMessageObject.childNodes[2].innerHTML = document.getElementById("msg-input").value;
@@ -152,6 +153,10 @@ function sendMessage(){
       }
       else{
          //call php send message with message id
+         var receiver = document.getElementById("username").innerHTML;
+         axios.post("../rest/message", {to: receiver , text: messageText}, {headers: {Authorization: "Bearer " + Cookies.get('token')}}).then(function (response) {
+            console.log(response);
+         });
          let tagLI = document.createElement("LI");
          let attClass = document.createAttribute("class");
          let attOnMouseOver = document.createAttribute("onmouseover");

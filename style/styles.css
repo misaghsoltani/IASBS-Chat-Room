@@ -532,3 +532,10 @@ li>p {
     /*border-left: 4px solid #666;*/
     cursor: pointer;
 }
+
+
+@media (max-width: 600px) {
+    .block-contact{
+        margin: 0 !important;
+    }
+}
